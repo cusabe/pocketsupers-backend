@@ -9,7 +9,6 @@ router.post('/post', async (req, res) => {
         image: req.body.image,
         powerstats: req.body.powerstats
     })
-
     try{
         const superheroToSave = await superhero.save();
         res.status(200).json(superheroToSave)

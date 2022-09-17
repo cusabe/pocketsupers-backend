@@ -3,17 +3,17 @@ const mongoose = require('mongoose');
 const superheroSchema = new mongoose.Schema({
     id: {
         required: true,
-        type: Number
+        type: String
     },
     name: String,
     image: {url: String},
     powerstats: {
-        intelligence: Number,
-        strength: Number,
-        speed: Number,
-        durability: Number,
-        power: Number,
-        combat: Number
+        intelligence: String,
+        strength: String,
+        speed: String,
+        durability: String,
+        power: String,
+        combat: String
     }
 
 })
