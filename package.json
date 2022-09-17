@@ -1,0 +1,26 @@
+{
+  "name": "pocketsupers-backend",
+  "version": "1.0.0",
+  "description": "Node.js backend to save data for pocketsupers-frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cusabe/pocketsupers-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cusabe/pocketsupers-backend/issues"
+  },
+  "homepage": "https://github.com/cusabe/pocketsupers-backend#readme",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.1",
+    "nodemon": "^2.0.20"
+  }
+}
