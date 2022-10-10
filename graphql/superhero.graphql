@@ -1,0 +1,49 @@
+type Query {
+    hello: String
+    getSuperheroByID (id: String!): Superhero
+    listSuperheroes: [Superhero]
+    createSuperhero (superheroInput: SuperheroInput): Superhero
+    updateSuperhero (superheroInput: SuperheroInput): Superhero
+    deleteSuperhero (id: String!): Superhero
+}   
+
+type Superhero {
+    id: String!
+    name: String
+    image: URLType
+    powerstats: PowerstatsType
+}
+
+input SuperheroInput {
+    id: String!
+    name: String
+    image: URLTypeInput
+    powerstats: PowerstatsTypeInput
+}
+
+type URLType {
+    url: String
+}
+
+input URLTypeInput {
+    url: String
+}
+
+type PowerstatsType {
+    intelligence: String
+    strength: String
+    speed: String
+    durability: String
+    power: String
+    combat: String
+}
+
+input PowerstatsTypeInput {
+    intelligence: String
+    strength: String
+    speed: String
+    durability: String
+    power: String
+    combat: String
+}
+
