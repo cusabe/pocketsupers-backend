@@ -27,14 +27,14 @@ const root = {
         }
     },
 
-    createSuperhero: async ({superheroInput}) => {
-        // console.log(superheroInput);
+    createSuperhero: async ({input}) => {
+        console.log(input);
         try{
             const superhero = new Superhero({
-                id: superheroInput.id,
-                name: superheroInput.name,
-                image: superheroInput.image,
-                powerstats: superheroInput.powerstats
+                id: input.id,
+                name: input.name,
+                image: input.image,
+                powerstats: input.powerstats
             })
             const superheroToSave = await superhero.save();
             return superheroToSave
@@ -44,12 +44,12 @@ const root = {
         }
     },
 
-    updateSuperhero: async ({superheroInput}) => {
-        // console.log(superheroInput);
+    updateSuperhero: async ({input}) => {
+        console.log(input);
         try {
             const updatedSuperhero = await Superhero.findOneAndUpdate(
-                {id: superheroInput.id},
-                superheroInput,
+                {id: input.id},
+                input,
                 { new: true }
             )
             return updatedSuperhero
@@ -60,7 +60,7 @@ const root = {
     },
 
     deleteSuperhero: async(id) => {
-        // console.log(id);
+        console.log(id);
         try {
             const deletedSuperhero = await Superhero.findOneAndDelete(id)
             return deletedSuperhero;

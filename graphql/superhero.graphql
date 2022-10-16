@@ -2,10 +2,13 @@ type Query {
     hello: String
     getSuperheroByID (id: String!): Superhero
     listSuperheroes: [Superhero]
-    createSuperhero (superheroInput: SuperheroInput): Superhero
-    updateSuperhero (superheroInput: SuperheroInput): Superhero
-    deleteSuperhero (id: String!): Superhero
 }   
+
+type Mutation {
+    createSuperhero (input: SuperheroInput): Superhero
+    updateSuperhero (input: SuperheroInput): Superhero
+    deleteSuperhero (id: String!): Superhero
+}
 
 type Superhero {
     id: String!
